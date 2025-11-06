@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://57lc4cjvqk4k"]
-
-[ext_resource type="Script" uid="uid://bqk6bejtbl14h" path="res://MeineEier.gd" id="1_uluqo"]
-
-[node name="Node3D" type="Node3D"]
-script = ExtResource("1_uluqo")
