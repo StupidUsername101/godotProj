@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://x2q8k3bw0r8x"]
+[gd_scene load_steps=4 format=3 uid="uid://x2q8k3bw0r8x"]
 
-[ext_resource type="PackedScene" uid="uid://biyfo3mfstaxu" path="res://scenes/revolver.tscn" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://brk711skwbwq" path="res://scripts/player.gd" id="1_g2els"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sh265"]
@@ -18,10 +17,13 @@ mesh = SubResource("CapsuleMesh_4flbx")
 
 [node name="Head" type="Node3D" parent="."]
 
-[node name="revolver" parent="Head" node_paths=PackedStringArray("player_head") instance=ExtResource("1_3vyb7")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.47148323, 0.40916634, -1.440522)
-player_head = NodePath("..")
+[node name="RayCast3D" type="RayCast3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 0.04042831, -0.9991824, 0, 0.9991824, 0.04042831, 0, 0.94061434, -0.6411264)
+target_position = Vector3(0, -5.56, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9980116, -0.21929342)
 current = true
+
+[node name="Node3D" type="Node3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4647947, 0.816509, -1.0955629)

@@ -1,15 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bt3a1at58csgb"]
+[gd_scene load_steps=7 format=3 uid="uid://bt3a1at58csgb"]
 
 [ext_resource type="PackedScene" uid="uid://bh4crnuqcnw0n" path="res://scenes/ground.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://x2q8k3bw0r8x" path="res://scenes/player.tscn" id="2_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://d1pny68v2tolv" path="res://scenes/block.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://x6kj7xc1blo6" path="res://scenes/image_frame.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://dpeemoova3o4o" path="res://scenes/tv.tscn" id="5_tefeu"]
+[ext_resource type="PackedScene" uid="uid://dpb7plb36deaj" path="res://scenes/field.tscn" id="6_tefeu"]
 
 [node name="Main" type="Node3D"]
 
 [node name="Ground" parent="." instance=ExtResource("1_o5qli")]
 
 [node name="Player" parent="." instance=ExtResource("2_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0632958, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2930746, -4.3663025)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.35360542, 0.9353947, 0, -0.9353947, 0.35360542, 0, 11.185515, 0)
@@ -19,3 +22,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4777155, -12.395752)
 
 [node name="Block2" parent="." instance=ExtResource("3_sugp2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.3740106, -12.22961)
+
+[node name="image_frame" parent="." instance=ExtResource("5_tbgi4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1934195, 0.85604775, 0)
+
+[node name="tv" parent="." instance=ExtResource("5_tefeu")]
+transform = Transform3D(-0.9996222, 0, -0.027485399, 0, 1, 0, 0.027485399, 0, -0.9996222, -8.780477, 1.0960908, -4.1438575)
+
+[node name="Field" parent="." instance=ExtResource("6_tefeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7561445, -4.2142887)
